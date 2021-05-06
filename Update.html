@@ -72,17 +72,21 @@
 				<fieldset>
 					<p id="contact-text" style="text-align:center;"> Personal Information </p>
 					<p class="text">First name:</p>
-					<input type="text" name="STUDENT_FNAME" value="<?php echo $STUDENT_FNAME; ?>">
-					<input type="text" name="STUD_NUM" value="<?php echo $STUD_NUM; ?>">
-					<br>
+					<div class="column">
+						<input type="Fname" name="STUDENT_FNAME" value="<?php echo $STUDENT_FNAME; ?>">
+					</div>
+					<div class="column">
+						<p class="stnum">Student Number:</p>
+						<input type="stnum" name="STUD_NUM" value="<?php echo $STUD_NUM; ?>">
+					</div>
 					<p class="text">Middle Name:</p>
-					<input type="text" name="STUD_MNAME" value="<?php echo $STUD_MNAME; ?>">
+					<input type="Mname" name="STUD_MNAME" value="<?php echo $STUD_MNAME; ?>">
 					<br>
 					<p class="text">Last name:</p>
-					<input type="text" name="STUD_LNAME" value="<?php echo $STUD_LNAME; ?>">
+					<input type="Lname" name="STUD_LNAME" value="<?php echo $STUD_LNAME; ?>">
 					<br>
 					<p class="text">Address:</p>
-					<input type="text" name="STUD_ADDRESS" value="<?php echo $STUD_ADDRESS; ?>">
+					<input type="stad" name="STUD_ADDRESS" value="<?php echo $STUD_ADDRESS; ?>">
 					<br>
 					<input type="submit" value="Update" name="update">
 				</fieldset>
