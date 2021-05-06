@@ -1,3 +1,34 @@
+<?php 
+include "config.php";
+
+// if the form's submit button is clicked, we need to process the form
+	if (isset($_POST['submit'])) {
+		// get variables from the form
+		$STUD_NUM = $_POST['studentnumber'];
+		$STUD_FNAME = $_POST['firstname'];
+		$STUD_MNAME = $_POST['middlename'];
+		$STUD_LNAME = $_POST['lastname'];
+        $STUD_ADDRESS = $_POST['address'];
+
+		//write sql query
+
+		$sql = "INSERT INTO student VALUES ('$STUD_NUM','$STUD_FNAME','$STUD_MNAME','$STUD_LNAME','$STUD_ADDRESS')";
+
+		// execute the query
+
+		$result = $conn->query($sql);
+
+		if ($result == TRUE) {
+			echo "New record created successfully.";
+		}else{
+			echo "Error:". $sql . "<br>". $conn->error;
+		}
+
+		$conn->close();
+
+	}
+
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -69,21 +100,21 @@
 	<div class="con-bg"> <!-- background -->
 		<div class="contact"> <!-- forms -->
 			<fieldset>
-				<form action="https://mapua.blackboard.com/?new_loc=%2Fultra%2F" target="_blank">
+				<form action="" target="_blank" method="POST">
 					<center><p id="contact-text"> Signup Form </p>
 					<p id="contact-text"> Personal Information </p></center>
-					<input type="text" name="stnumber" size="10"  maxlength=15 placeholder="Enter your Student Number...">
+					<input type="text" name="studentnumber" size="10"  maxlength=15 placeholder="Enter your Student Number...">
 					<br />
 					<br />
-					<input type="text" name="Fname" size="50"  maxlength=100 placeholder="Enter your First Name...">
+					<input type="text" name="firstname" size="50"  maxlength=100 placeholder="Enter your First Name...">
 					<br />
-					<input type="text" name="Mname" size="50"  maxlength=20 placeholder="Enter your Middle Name...">
+					<input type="text" name="middlename" size="50"  maxlength=20 placeholder="Enter your Middle Name...">
 					<br />
-					<input type="text" name="Lname" size="50"  maxlength=50 placeholder="Enter your Last Name...">
+					<input type="text" name="lastname" size="50"  maxlength=50 placeholder="Enter your Last Name...">
 					<br />
-					<br />
-					<input id="form-input" type="email" name="email" size="40"  maxlength=100 placeholder="Enter your Email...">
-					<br />
+					///<br />
+					///<input id="form-input" type="email" name="email" size="40"  maxlength=100 placeholder="Enter your Email...">
+					///<br />
 					<br />
 					<input id="form-input" type="address" name="address" size="150" maxlength=100 placeholder="Enter your Address...">
 					<br />
