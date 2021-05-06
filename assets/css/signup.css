@@ -312,20 +312,19 @@ input[type=address], select {
 	border-radius: 4px;
 }
 input[type=submit], select {
-	padding: 5px;
-	float: right;
-	margin-right: 1rem;
-	border-radius: 4px;
-	width: 10vh;
+  background: #e1c088;
+  border: 0;
+  width: 15%;
+  padding: 6px 0;
+  text-align: center;
+  color: rgba(125,19,29,255);
+  transition: 0.3s;
+  cursor: pointer;
+  float: right;
 }
-#contact-last {
-	color: #e1c088;
-	font-family: 'Open Sans';
-	font-size: 12pt;
-	font-weight: 20px;
-	float: right;
-	margin-right: -9rem;
-	margin-top: -7px;
+input[type="submit"]:hover {
+  background: black;
+  color: rgba(225,192,136,255);
 }
 
 /*=============
