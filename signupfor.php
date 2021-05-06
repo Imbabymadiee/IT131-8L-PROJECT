@@ -112,9 +112,6 @@ include "config.php";
 					<br />
 					<input type="text" name="lastname" size="50"  maxlength=50 placeholder="Enter your Last Name...">
 					<br />
-					///<br />
-					///<input id="form-input" type="email" name="email" size="40"  maxlength=100 placeholder="Enter your Email...">
-					///<br />
 					<br />
 					<input id="form-input" type="address" name="address" size="150" maxlength=100 placeholder="Enter your Address...">
 					<br />
